@@ -46,10 +46,6 @@ cd Kit_Test
 
 ## II / Enjoy ! 😊
 
-```bash
-python TheSCRIPT.py
-```
-
 ----
 
 ## Tips
@@ -73,10 +69,10 @@ dans C:\python312\
 
 ### 2. CLI PowerShell v7.5.4 + (Accentuée)
 
-1. Vérif version ionstallée :
+1. Vérif version installée :
 
     ```bash
     $PSVersionTable.PSVersion
     ```
 
-2. Si pas 7.5+ : [Installer le der PowerShell](https://learn.microsoft.com/fr-fr/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)
+2. Si pas 7.5.4+ : [Installer le der PowerShell](https://learn.microsoft.com/fr-fr/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)
