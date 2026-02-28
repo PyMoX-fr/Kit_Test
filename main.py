@@ -6,6 +6,7 @@ from pymox_kit import *  # C pas top, même déconseillé, mais tolérable pour 
 from rich import print
 
 B = "\033[1;1m"
+I = "\033[2;3m"
 BI = "\033[3;1m"
 R = "\033[0m"
 # console = Console()
@@ -37,10 +38,10 @@ if __name__ == "__main__":
 
     w = str.__len__()
     # print("Oki 21\n" + pymox_kit.hello()) # Conseillé
-    cls()
+    # cls() ❌ re-activer
     print(
         f"Réponses des fonctions {BI}hello(){R} puis {BI}bye(){R} de la lib {B}PyMoX-Kit{R} :\n\n→ "
-        + hello()
+        # + hello()
         + "\n→ "
         + bye(),
         end="\n\n",
@@ -54,7 +55,7 @@ if __name__ == "__main__":
         "\n"
         + "-" * w
         + "\n"
-        + f"Psittt...: Comme t'es certainement pas qu'un simple numéro, alors {B}adapte vite le précédent print() !{R}\n(Oui, celui qui affiche la string définie en \033[1;31mligne n°{line} dans le code source\033[0m !)"
+        + f"Psittt...: Comme t'es certainement pas qu'un simple numéro, alors {B}adapte vite le précédent print() !{R}\n({I}Oui, celui qui affiche la string définie en \033[1;31mligne n°{line} dans le code source\033[0m !{R})"
     )
 
 # ❌ Possibilité de voir l'OS ICI

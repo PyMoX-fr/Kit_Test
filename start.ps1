@@ -45,8 +45,8 @@ function Activate-Venv {
     Write-Host "[ERREUR] Le venv n'existe pas. Lancez le mode 0 pour le créer."
     exit 1
   }
-  Write-Host "Activation du venv..."
   . ".\.venv\Scripts\Activate.ps1"
+  Write-Host "VEnv activé."
 }
 
 function Upgrade-Pip {
@@ -79,7 +79,8 @@ function Start-App {
   Write-Host "  Lancement de main.py"
   Write-Host "========================================"
   Write-Host ""
-  Write-Host "Démarrage automatique du script..."
+  Write-Host "Démarrage automatique du script... 🚀"
+  Write-Host ""
   flet run main.py
 }
 
@@ -138,10 +139,19 @@ switch ($mode) {
   }
   default {
     if (-not (Test-Path ".venv/Scripts/python.exe")) {
-      Write-Host "[ERREUR] Aucun .venv détecté. Lancer ./start 0 pour initialiser complètement l'environnement."
+      Write-Host "[ERREUR] Aucun .venv détecté. Lancer ./start 0 pour initialiser l'environnement."
       exit 1
     }
+    $minVersion = [Version]"7.5.4"
 
+    if ($PSVersionTable.PSVersion -lt $minVersion) {
+      Write-Host ""
+      Write-Host "*** ATTENTION: INSTALLER PowerShell >= 7.5.4 pour profiter pleinement des messages (Voir README.md, Tips/2) ***"
+      Write-Host ""
+      Write-Host "Appuyer sur une touche pour continuer..."
+      Write-Host ""
+      [void][System.Console]::ReadKey($true)
+    }
     Activate-Venv
     Start-App
   }
