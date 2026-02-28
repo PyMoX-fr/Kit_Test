@@ -76,3 +76,7 @@ dans C:\python312\
     ```
 
 2. Si pas 7.5.4+ :<a href="https://learn.microsoft.com/fr-fr/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5" title="Cliquer ICI pour installer cette version" target="_blank"><img src="https://img.shields.io/badge/PowerShell-7.5.4_+-0078D6?logo=windows&logoColor=white" alt="Windows ready"></a>
+
+---
+
+[![GitHub followers](https://img.shields.io/github/followers/GrCOTE7?style=for-the-badge&logo=github&color=6366F1)](https://github.com/orgs/PyMoX-fr/repositories)
