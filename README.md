@@ -34,7 +34,7 @@
 
 </div>
 
-Un simple dépôt public pour tester **PyMox_Kit**, une lib à laquelle que vous pouvez aussi contribuer.
+Un simple et petit dépôt GH public pour tester **PyMox_Kit**, une lib à laquelle vous pouvez aussi contribuer, tout comme le Porjet de base: **[PyMoX.fr](PyMoX.fr)**.
 
 ## I / Installation
 
