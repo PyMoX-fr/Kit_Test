@@ -1,18 +1,22 @@
-# Encodage UTF‑8 complet
 param(
-  [ValidateSet("run", "0", "1", "help")]
-  [string]$mode = "run"
+  [ValidateSet("run", "0", "1", "help", "--help")]
+  [string]$mode = "run",
+
+  [Alias("h", "help")]
+  [switch]$HelpSwitch
 )
 
+# Encodage UTF‑8 complet
 [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8
 [System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
+
 function Show-Help {
   Write-Host "Utilisation : ./start [mode]"
   Write-Host "  Sans argument  -> (.venv) flet run main.py"
-  Write-Host "  0           -> reset total (vénv + dépendances)"
-  Write-Host "  1           -> réinstalle uniquement pymox_kit"
+  Write-Host "  0              -> Reset total (VEnv + dépendances)"
+  Write-Host "  1              -> Ré-installe uniquement PyMoX_Kit"
 }
 
 function Deactivate-ExistingVenv {
@@ -76,15 +80,15 @@ function Run-PymoxKitFresh {
 
 function Start-App {
   Write-Host "========================================"
-  Write-Host "  Lancement de main.py"
+  Write-Host "  Lancement de ./main.py"
   Write-Host "========================================"
   Write-Host ""
-  Write-Host "Démarrage automatique du script... 🚀"
+  Write-Host "Démarrage automatique du script ./main.py... 🚀"
   Write-Host ""
-  flet run main.py
+  flet run -d -r --ignore-dirs __pycache__ main.py
 }
 
-if ($mode -eq "help") {
+if ($HelpSwitch -or $mode -in @("help", "--help")) {
   Show-Help
   exit 0
 }
