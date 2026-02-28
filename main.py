@@ -1,31 +1,31 @@
 import flet, inspect, os, subprocess
+
 # Permet de lancer le script avec : flet run main.py
 # from pymox_kit import hello, bye  # Conseillé pour éviter les conflits de noms et garder une trace claire de l'origine des fonctions
 from pymox_kit import *  # C pas top, même déconseillé, mais tolérable pour 1 ch'ti test local rapide ;-)
+
 # from rich.console import Console
 from rich import print
 
-B = "\033[1;1m"
-I = "\033[2;3m"
-BI = "\033[3;1m"
-R = "\033[0m"
+B = "\x1b[1m"
+I = "\x1b[3m"
+Y = "\x1b[93m"
+BI = "\x1b[1;3m"
+RED = "\x1b[91m"
+R = "\x1b[0m"
 # console = Console()
+
 
 def clear():
     print("\033c", end="")
 
 
 def cls(title=None, filename=""):
-    """Réinitialise la console() Affiche title sauf si title=Que dalle)
-    """
+    """Réinitialise la console() Affiche title sauf si title=Que dalle)"""
 
     # os.system("cls" if os.name == "nt" else "clear")
     clear()
-
-    # cliWAnalysis()
-
-    # if title != 0:
-    #     setTitle(title, filename)
+    # ❌ cliWAnalysis()
 
 
 if __name__ == "__main__":
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         "\n"
         + "-" * w
         + "\n"
-        + f"Psittt...: Comme t'es certainement pas qu'un simple numéro, alors {B}adapte vite le précédent print() !{R}\n({I}Oui, celui qui affiche la string définie en \033[1;31mligne n°{line} dans le code source\033[0m !{R})"
+        + f"Psittt...: Comme t'es certainement pas qu'un simple numéro, alors {B}adapte vite le précédent print() !{R}\n({I}{Y}Oui, celui qui affiche la string définie en {RED}ligne n°{line} dans le code source {R}{RED}{B}./main.py{R} !)"
     )
 
 # ❌ Possibilité de voir l'OS ICI
