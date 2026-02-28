@@ -11,6 +11,7 @@ B = "\x1b[1m"
 I = "\x1b[3m"
 Y = "\x1b[93m"
 BI = "\x1b[1;3m"
+G = "\x1b[92m"
 RED = "\x1b[91m"
 R = "\x1b[0m"
 # console = Console()
@@ -25,7 +26,6 @@ def cls(title=None, filename=""):
 
     # os.system("cls" if os.name == "nt" else "clear")
     clear()
-    # ❌ cliWAnalysis()
 
 
 if __name__ == "__main__":
@@ -48,13 +48,13 @@ if __name__ == "__main__":
 
     print("-" * w + "\n")
 
-    print(str)
+    print(f"{G}{str}{R}")
 
     print(
         "\n"
         + "-" * w
         + "\n"
-        + f"Psittt...: Comme t'es certainement pas qu'un simple numéro, alors {B}adapte vite le précédent print() !{R}\n({I}{Y}Oui, celui qui affiche la string définie en {RED}ligne n°{line} dans le code source {R}{RED}{B}./main.py{R} !)"
+        + f"Psittt...: Comme t'es certainement pas qu'un simple numéro, alors {B}adapte vite le précédent print() !{R}\n({I}{Y}Oui, celui qui affiche la string en vert juste avant, et définie à la ligne {RED}n° {R}{B}{RED}{line}{R}{I}{Y} dans le code source {R}{RED}{B}./main.py{R} !)"
     )
 
 # ❌ Possibilité de voir l'OS ICI

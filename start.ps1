@@ -21,7 +21,7 @@ function Show-Help {
 
 function Deactivate-ExistingVenv {
   if (Get-Command deactivate -ErrorAction SilentlyContinue) {
-    Write-Host "Je sors du venv actuel et le vide..."
+    Write-Host "Je sors du venv actuel, le vide et le supprime..."
     deactivate
     Write-Host "1 - Sorti → Root."
   }
@@ -136,7 +136,7 @@ switch ($mode) {
     Start-App
   }
   "1" {
-    Write-Host "Mode 1 : réinstallation rapide de pymox_kit"
+    Write-Host "Mode 1 : réinstallation rapide de PyMoX_Kit"
     Activate-Venv
     Run-PymoxKitFresh
     Start-App
