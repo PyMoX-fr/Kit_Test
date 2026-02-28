@@ -67,7 +67,7 @@ dans C:\python312\
     pip install -r requirements
     ```
 
-### 2. CLI PowerShell v7.5.4 + (Accentuée)
+### 2. CLI PowerShell v7.5.4 + (Accentuée & colorisée)
 
 1. Vérif version installée :
 
@@ -75,4 +75,4 @@ dans C:\python312\
     $PSVersionTable.PSVersion
     ```
 
-2. Si pas 7.5.4+ : [Installer le der PowerShell](https://learn.microsoft.com/fr-fr/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)
+2. Si pas 7.5.4+ :<a href="https://learn.microsoft.com/fr-fr/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5" title="Cliquer ICI pour installer cette version" target="_blank"><img src="https://img.shields.io/badge/PowerShell-7.5.4_+-0078D6?logo=windows&logoColor=white" alt="Windows ready"></a>
