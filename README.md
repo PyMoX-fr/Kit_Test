@@ -5,7 +5,7 @@
   <!-- Ligne OS -->
   <div style="margin: 0;">
     <img src="https://img.shields.io/badge/OS-Windows_&_Linux-0078D6" alt="Win & Linux compatibles">
-    <img src="https://img.shields.io/badge/Windows-Ready-0078D6?logo=windows&logoColor=white" alt="Windows ready">
+    <a href="https://learn.microsoft.com/fr-fr/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5" title="Cliquer ICI pour installer cette version"><img src="https://img.shields.io/badge/Windows-Ready-0078D6?logo=windows&logoColor=white" alt="Windows ready"></a>
     <img src="https://img.shields.io/badge/PowerShell-7.5.4_+-0078D6?logo=windows&logoColor=white" alt="Windows ready">
     <img src="https://img.shields.io/badge/Linux-Compatible-FCC624?logo=linux" alt="Linux compatible">
   </div>
