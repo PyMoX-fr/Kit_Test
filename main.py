@@ -16,8 +16,7 @@ def clear():
 
 
 def cls(title=None, filename=""):
-    """Réinitialise la console
-    Affiche title sauf si title=Que dalle
+    """Réinitialise la console() Affiche title sauf si title=Que dalle)
     """
 
     # os.system("cls" if os.name == "nt" else "clear")
@@ -41,7 +40,7 @@ if __name__ == "__main__":
     # cls() ❌ re-activer
     print(
         f"Réponses des fonctions {BI}hello(){R} puis {BI}bye(){R} de la lib {B}PyMoX-Kit{R} :\n\n→ "
-        # + hello()
+        + hello()
         + "\n→ "
         + bye(),
         end="\n\n",
