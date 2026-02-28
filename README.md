@@ -1,4 +1,8 @@
-# Test PyMoX_Kit [![GH](https://img.shields.io/badge/GitHub-Kit_Test-0EA5E9)](https://github.com/PyMoX-fr/Kit_Test)
+<div style="text-align: center;">
+    <img src="assets/imgs/Kit_Test_Logo.png" alt="PyMoX">
+</div>
+
+# Kit_Test (Dpt. PyMoX) [![GH](https://img.shields.io/badge/GitHub-Kit_Test-0EA5E9)](https://github.com/PyMoX-fr/Kit_Test)
 
 
 <div align="center" style="margin-top: 0px">
