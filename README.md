@@ -37,6 +37,10 @@ Un simple et petit dépôt GH public pour tester **PyMox_Kit**, une lib à laque
 
 <!-- ❌ add ctrl + alt + l/w shortcuts 4 linux & win icons ds vsc -->
 
+## Exemple de fonctions à venir dans PyMox-Kit
+
+![Sass](./assets/videos/demoSeb.mp4)
+
 ## I / Installation
 
 🪟
