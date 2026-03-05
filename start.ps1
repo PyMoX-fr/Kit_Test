@@ -125,7 +125,10 @@ function Remove-Venv {
 
 function Ensure-Venv {
   Write-Host "Création de l'environnement virtuel ← racine..."
-  python -m venv .venv
+  # py -3.11 -m venv .venv
+  # py -3.12 -m venv .venv
+  py -3.13 -m venv .venv
+  # py -m venv .venv
   if (-not (Test-Path $VenvPath)) {
     Write-Host "[ERREUR] Échec de création de l'environnement virtuel."
     exit 1
@@ -138,6 +141,24 @@ function Activate-Venv {
   }
   . $ActivateScript
   Write-Host "VEnv activé."
+  
+  # Le fichier ./v/Lib/site-packages/sitecustomize.py
+  # est chargé automatiquement par Python au démarrage
+  # Il configure le sys.path pour tous les scripts, même lancés via Flet
+
+
+  # --- Copie automatique de sitecustomize.py ( Juste for fastapi/ ) ---
+  # $Source = "tools\sitecustomize.py"
+  # $Target = ".venv\Lib\site-packages\sitecustomize.py"
+
+  # if (Test-Path $Source) {
+  #   Copy-Item $Source $Target -Force
+  #   Write-Host "sitecustomize.py copié dans le venv."
+  # }
+  # else {
+  #   Write-Host "[AVERTISSEMENT] tools\sitecustomize.py introuvable."
+  # }
+
 }
 
 function Upgrade-Pip {
