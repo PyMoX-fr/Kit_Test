@@ -41,9 +41,11 @@ if __name__ == "__main__":
 
     encouragements = f"\nBon {GREEN}{SI}{SB}code{R} !"
     encouragements = f"Bon code !"
-    print(len(encouragements))
-
-    print("\n" + '─'* (CLIW - 15), f"Bon {GREEN}{SI}{SB}code{R} !", "─" * 3)
+    
+    car = "─"
+    print(
+        "\n" + car * (CLIW - 15), f"Bon {GREEN}{SI}{SB}code{R} !", car * 3
+    )  # ALT + 2500 pour tiret continu
 
     end()
 
